@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./index.css">
+        <script src="index.js" defer></script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="menu">
+            <button id="init" style="width: 60px" onclick="InitSearch()">Iniciar</button>
+            <button id="clean" onclick="CleanTable()">Limpar</button>
+            <button id="console" onclick="ExecAction('console')">Console</button>
+            <button id="browser" onclick="ExecAction('browser')">Browser</button>
+            <button onclick="ExecAction('config')">Configurações</button>
+            <button onclick="ExecAction('login')">Login</button>
+            <button onclick="ExecAction('purchase')">Purchase</button>
+            <!--button onclick="ExecAction('dev')">Dev</button-->
+        </div>
+        
+        <div class="tableContainer">
+            <table id="productsTable">
+                <tr>
+                    <th>NOME DO PRODUTO</th>
+                    <th>SKU</th>
+                    <th>ANTERIOR</th>
+                    <th>ATUAL</th>
+                    <th>DESCONTO</th>
+                    <th>DISPONÍVEIS</th>
+                </tr>
+                <!--tr>
+                    <td>HEADSET GAMER REDRAGON MEDEA, RGB, DRIVERS 50MM, PRETO, H280-MEDEA</td>
+                    <td>H280-MEDEA</td>
+                    <td>R$ 188.12</td>
+                    <td>R$ 135.28</td>
+                    <td>28%</td>
+                    <td>465/500</td>
+                </tr-->
+            </table>
+        </div>
+        <footer>
+            <span id="messages">Mensagens: 0</span>
+            <span id="success">Sucesso: 0</span>
+            <span id="error">Erro: 0</span>
+            <span id="username">Usuário: Not found</span>
+        </footer>
+    </body>
+</html>
