@@ -1,47 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+    
     <head>
-        <link rel="stylesheet" href="./index.css">
-        <script src="index.js" defer></script>
         <meta charset="UTF-8">
-    </head>
-    <body>
-        <div id="menu">
-            <button id="init" style="width: 60px" onclick="InitSearch()">Iniciar</button>
-            <button id="clean" onclick="CleanTable()">Limpar</button>
-            <button id="console" onclick="ExecAction('console')">Console</button>
-            <button id="browser" onclick="ExecAction('browser')">Browser</button>
-            <button onclick="ExecAction('config')">Configurações</button>
-            <button onclick="ExecAction('login')">Login</button>
-            <button onclick="ExecAction('purchase')">Purchase</button>
-            <!--button onclick="ExecAction('dev')">Dev</button-->
-        </div>
+        <title>Agência MWBR</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Bootstrap Icons  -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         
-        <div class="tableContainer">
-            <table id="productsTable">
-                <tr>
-                    <th>NOME DO PRODUTO</th>
-                    <th>SKU</th>
-                    <th>ANTERIOR</th>
-                    <th>ATUAL</th>
-                    <th>DESCONTO</th>
-                    <th>DISPONÍVEIS</th>
-                </tr>
-                <!--tr>
-                    <td>HEADSET GAMER REDRAGON MEDEA, RGB, DRIVERS 50MM, PRETO, H280-MEDEA</td>
-                    <td>H280-MEDEA</td>
-                    <td>R$ 188.12</td>
-                    <td>R$ 135.28</td>
-                    <td>28%</td>
-                    <td>465/500</td>
-                </tr-->
-            </table>
-        </div>
-        <footer>
-            <span id="messages">Mensagens: 0</span>
-            <span id="success">Sucesso: 0</span>
-            <span id="error">Erro: 0</span>
-            <span id="username">Usuário: Not found</span>
-        </footer>
+        <!-- Main Style -->
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    
+    <body>
+
+        <header>
+            <div class="interface">
+                <div class="logo">
+                    <a href="#">
+                        <img src="images/logo.png" alt="Logo do site">
+                    </a>
+                </div>
+                <nav class="menu-desktop">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Especialidades</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Projetos</a></li>
+                    </ul>
+                </nav>
+                <div class="btn-contato">
+                    <a href="#">
+                        <button class="flex"><p>whatsapp</p><img src="images/whatsapp.png" alt="whatsapp"></button>
+                    </a>
+                </div>
+
+                <div class="btn-abrir-menu" id="btn-menu">
+                    <i class="bi bi-list"></i>
+                </div>
+
+                <div class="menu-mobile" id="menu-mobile">
+                    <div class="btn-fechar">
+                        <i class="bi bi-x-lg"></i>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Especialidades</a></li>
+                            <li><a href="#">Sobre</a></li>
+                            <li><a href="#">Projetos</a></li>
+                            <li><a href="#">Whatsapp</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="overlay-menu"></div>
+            </div>
+        </header>
+
+        <main>
+            <section class="topo-do-site">
+                <div class="interface">
+                    <div class="flex">
+                        <div class="txt-topo-site">
+                            <h1>TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL<span>.</span></h1>
+                            <p>Criatividade e inovação andam lado a lado. Com uma combinação única de design impactante, funcionalidade intuitiva e otimização para resultados, estou pronto para criar a presença online dos seus sonhos.</p>
+
+                            <div class="btn-contato">
+                                <a href="#">
+                                    <button>Entre em contato</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="img-topo-site">
+                            <img src="images/pessoa.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="especialidades">
+                <div class="interface">
+                    <h2 class="titulo">MINHAS <span>ESPECIALIDADES</span></h2>
+                    <div class="flex">
+                        <div class="especialidades-box">
+                            <i class="bi bi-code-square"></i>
+                            <h3>Website</h3>
+                            <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+                        </div>
+                        <div class="especialidades-box">
+                            <i class="bi bi-cart"></i>
+                            <h3>Loja Online</h3>
+                            <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+                        </div>
+                        <div class="especialidades-box">
+                            <i class="bi bi-wordpress"></i>
+                            <h3>Wordpress</h3>
+                            <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
     </body>
 </html>
