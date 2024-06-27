@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Google OAuth Test</title>
+  <title>Google OAuth Test 2</title>
+  <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+  <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <meta name="google-signin-client_id" content="87478016894-p1pdbiu2cbjlolkl0veolda452vknct4.apps.googleusercontent.com">
 </head>
@@ -10,11 +12,15 @@
   <script>
     function onSignIn(googleUser) {
       console.log('onSignIn function called');
-      var profile = googleUser.getBasicProfile();
-      console.log('ID: ' + profile.getId());
-      console.log('Name: ' + profile.getName());
-      console.log('Image URL: ' + profile.getImageUrl());
-      console.log('Email: ' + profile.getEmail());
+      try {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId());
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail());
+      } catch (error) {
+        console.error('Error during onSignIn:', error);
+      }
     }
   </script>
 </body>
