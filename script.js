@@ -1,12 +1,12 @@
-let btnMenu = document.getElementById('btn-menu')
-let menuMobile = document.getElementById('menu-mobile')
+let btnMenu = document.getElementById('siteBtnMenu')
+let menu = document.getElementById('siteMenu')
 
 btnMenu.addEventListener('click', () => {
 
-    menuMobile.classList.add('abrir-menu')
+    menu.classList.add('openMenu')
 })
 
-menuMobile.addEventListener('click', () => {
+menu.addEventListener('click', () => {
 
-    menuMobile.classList.remove('abrir-menu')
+    menu.classList.remove('openMenu')
 })
