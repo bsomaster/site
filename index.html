@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Google OAuth em Site Estático</title>
+  <title>Google OAuth Test</title>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <meta name="google-signin-client_id" content="87478016894-p1pdbiu2cbjlolkl0veolda452vknct4.apps.googleusercontent.com">
 </head>
@@ -9,6 +9,7 @@
   <div class="g-signin2" data-onsuccess="onSignIn"></div>
   <script>
     function onSignIn(googleUser) {
+      console.log('onSignIn function called');
       var profile = googleUser.getBasicProfile();
       console.log('ID: ' + profile.getId());
       console.log('Name: ' + profile.getName());
