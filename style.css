@@ -72,6 +72,13 @@ header button {
     margin-left: 50px;
 }
 
+.siteBtnDiscord {
+
+	background-color: #f72549;
+	border-radius: 50vh;
+	padding: 4px;
+}
+
 .siteBtnClose {
 
     display: none;
