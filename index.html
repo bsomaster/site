@@ -18,9 +18,17 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="index.css">
         <script src="script.js" defer></script>
+		
+		<!-- Google Login -->
+		<script src="https://accounts.google.com/gsi/client" async defer></script>
     </head>
     
     <body>
+	
+		<div id="g_id_onload"
+		   data-client_id="87478016894-p1pdbiu2cbjlolkl0veolda452vknct4.apps.googleusercontent.com"
+		   data-callback="onSignIn">
+		</div>
 
         <header>
             
@@ -52,9 +60,15 @@
                 </div>
 
                 <div class="siteBtnDiscord">
-                    <a href="https://discord.gg/Ks7W8umuds">
-                        <button class="flex"><p>Discord</p><i class="fa-brands fa-discord"></i></button>
-                    </a>
+                    <div class="g_id_signin"
+						data-type="standard"
+						data-shape="pill"
+						data-theme="filled_black"
+						data-text="signin"
+						data-size="large"
+						data-logo_alignment="left"
+						data-width="450px">
+					</div>
                 </div>
 
                 <div class="siteOverMenu"></div>
