@@ -3,7 +3,7 @@
     
     <head>
         <meta charset="UTF-8">
-        <title>Web Master</title>
+        <title>Web Master 2</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Google Fonts -->
@@ -61,13 +61,13 @@
 
                 <div class="siteBtnDiscord">
                     <div class="g_id_signin"
-						data-type="standard"
+						data-type="button"
 						data-shape="pill"
 						data-theme="filled_black"
 						data-text="signin"
 						data-size="large"
 						data-logo_alignment="left"
-						data-width="450px">
+						data-width="200px">
 					</div>
                 </div>
 
@@ -126,5 +126,16 @@
             </section>
         </main>
 
+	    <script>
+	    function onSignIn(response) {
+	      console.log('ID Token: ' + response.credential);
+	      // Decodifique o token JWT para obter informações do usuário
+	      const user = JSON.parse(atob(response.credential.split('.')[1]));
+	      console.log('ID: ' + user.sub);
+	      console.log('Name: ' + user.name);
+	      console.log('Image URL: ' + user.picture);
+	      console.log('Email: ' + user.email);
+	    }
+	  </script>
     </body>
 </html>
